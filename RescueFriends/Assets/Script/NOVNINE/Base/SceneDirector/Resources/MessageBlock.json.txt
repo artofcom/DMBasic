@@ -1,0 +1,246 @@
+{
+"skeleton": { "hash": "2PPcD46td2QDKjjSGTpPXlwuh+4", "spine": "3.5.46", "width": 16, "height": 32 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "UI_ingame_star", "parent": "root" },
+	{ "name": "UI_ingame_star2", "parent": "root" },
+	{ "name": "UI_ingame_star3", "parent": "root" },
+	{ "name": "UI_ingame_star4", "parent": "root" },
+	{ "name": "UI_ingame_star5", "parent": "root" },
+	{ "name": "UI_ingame_star6", "parent": "root" },
+	{ "name": "curtain", "parent": "root", "scaleX": 0.01, "scaleY": 0.01 }
+],
+"slots": [
+	{ "name": "curtain", "bone": "curtain", "color": "ffffff00", "attachment": "curtain" },
+	{ "name": "UI_ingame_star_7", "bone": "UI_ingame_star6", "color": "ffffff3e" },
+	{ "name": "UI_ingame_star_6", "bone": "UI_ingame_star5", "color": "ffffff5e" },
+	{ "name": "UI_ingame_star_5", "bone": "UI_ingame_star4", "color": "ffffff80" },
+	{ "name": "UI_ingame_star_4", "bone": "UI_ingame_star3", "color": "ffffffb3" },
+	{ "name": "UI_ingame_star_3", "bone": "UI_ingame_star2", "color": "ffffffe3" },
+	{ "name": "UI_ingame_star_03", "bone": "UI_ingame_star" },
+	{ "name": "loding", "bone": "root", "attachment": "loding" }
+],
+"path": [
+	{
+		"name": "loding",
+		"order": 0,
+		"bones": [ "UI_ingame_star6", "UI_ingame_star5", "UI_ingame_star4", "UI_ingame_star3", "UI_ingame_star2", "UI_ingame_star" ],
+		"target": "loding",
+		"spacingMode": "percent",
+		"rotateMix": 0
+	}
+],
+"skins": {
+	"default": {
+		"UI_ingame_star_03": {
+			"UI_ingame_star_03": { "rotation": -33, "width": 44, "height": 38 }
+		},
+		"UI_ingame_star_3": {
+			"UI_ingame_star_03": { "rotation": -33, "width": 44, "height": 38 }
+		},
+		"UI_ingame_star_4": {
+			"UI_ingame_star_03": { "rotation": -33, "width": 44, "height": 38 }
+		},
+		"UI_ingame_star_5": {
+			"UI_ingame_star_03": { "rotation": -33, "width": 44, "height": 38 }
+		},
+		"UI_ingame_star_6": {
+			"UI_ingame_star_03": { "rotation": -33, "width": 44, "height": 38 }
+		},
+		"UI_ingame_star_7": {
+			"UI_ingame_star_03": { "rotation": -33, "width": 44, "height": 38 }
+		},
+		"curtain": {
+			"curtain": { "scaleX": 100, "scaleY": 200, "width": 16, "height": 16 }
+		},
+		"loding": {
+			"loding": {
+				"type": "path",
+				"lengths": [ 198.39, 397.64, 473.9 ],
+				"vertexCount": 9,
+				"vertices": [ -38.2, 63.09, 0.63, 63.01, 86.45, 62.84, 84.85, -66.02, 0.21, -66.19, -85.74, -65.92, -85.22, 63.44, 0.21, 63.44, 59.28, 63.75 ]
+			}
+		}
+	}
+},
+"animations": {
+	"hide": {
+		"slots": {
+			"UI_ingame_star_03": {
+				"color": [
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"UI_ingame_star_3": {
+				"color": [
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"UI_ingame_star_4": {
+				"color": [
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"UI_ingame_star_5": {
+				"color": [
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"UI_ingame_star_6": {
+				"color": [
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"UI_ingame_star_7": {
+				"color": [
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"curtain": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"play": {
+		"slots": {
+			"UI_ingame_star_03": {
+				"attachment": [
+					{ "time": 0, "name": "UI_ingame_star_03" }
+				]
+			},
+			"UI_ingame_star_3": {
+				"attachment": [
+					{ "time": 0, "name": "UI_ingame_star_03" }
+				]
+			},
+			"UI_ingame_star_4": {
+				"attachment": [
+					{ "time": 0, "name": "UI_ingame_star_03" }
+				]
+			},
+			"UI_ingame_star_5": {
+				"attachment": [
+					{ "time": 0, "name": "UI_ingame_star_03" }
+				]
+			},
+			"UI_ingame_star_6": {
+				"attachment": [
+					{ "time": 0, "name": "UI_ingame_star_03" }
+				]
+			},
+			"UI_ingame_star_7": {
+				"attachment": [
+					{ "time": 0, "name": "UI_ingame_star_03" }
+				]
+			},
+			"curtain": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"UI_ingame_star": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": -90 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.5333, "angle": 90 },
+					{ "time": 0.7333, "angle": 0 },
+					{ "time": 0.9333, "angle": -90 },
+					{ "time": 1.1, "angle": 180 },
+					{ "time": 1.3, "angle": 90 },
+					{ "time": 1.5, "angle": 0 }
+				]
+			},
+			"UI_ingame_star2": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": -90 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.5333, "angle": 90 },
+					{ "time": 0.7333, "angle": 0 },
+					{ "time": 0.9333, "angle": -90 },
+					{ "time": 1.1, "angle": 180 },
+					{ "time": 1.3, "angle": 90 },
+					{ "time": 1.5, "angle": 0 }
+				]
+			},
+			"UI_ingame_star3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": -90 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.5333, "angle": 90 },
+					{ "time": 0.7333, "angle": 0 },
+					{ "time": 0.9333, "angle": -90 },
+					{ "time": 1.1, "angle": 180 },
+					{ "time": 1.3, "angle": 90 },
+					{ "time": 1.5, "angle": 0 }
+				]
+			},
+			"UI_ingame_star4": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": -90 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.5333, "angle": 90 },
+					{ "time": 0.7333, "angle": 0 },
+					{ "time": 0.9333, "angle": -90 },
+					{ "time": 1.1, "angle": 180 },
+					{ "time": 1.3, "angle": 90 },
+					{ "time": 1.5, "angle": 0 }
+				]
+			},
+			"UI_ingame_star5": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": -90 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.5333, "angle": 90 },
+					{ "time": 0.7333, "angle": 0 },
+					{ "time": 0.9333, "angle": -90 },
+					{ "time": 1.1, "angle": 180 },
+					{ "time": 1.3, "angle": 90 },
+					{ "time": 1.5, "angle": 0 }
+				]
+			},
+			"UI_ingame_star6": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": -90 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.5333, "angle": 90 },
+					{ "time": 0.7333, "angle": 0 },
+					{ "time": 0.9333, "angle": -90 },
+					{ "time": 1.1, "angle": 180 },
+					{ "time": 1.3, "angle": 90 },
+					{ "time": 1.5, "angle": 0 }
+				]
+			},
+			"curtain": {
+				"scale": [
+					{ "time": 0, "x": 100, "y": 100 }
+				]
+			}
+		},
+		"paths": {
+			"loding": {
+				"position": [
+					{ "time": 0 },
+					{ "time": 0.7333, "position": 0.3 },
+					{ "time": 1.5, "position": 1 }
+				],
+				"spacing": [
+					{ "time": 0 },
+					{ "time": 0.7333, "spacing": 0.05 },
+					{ "time": 1.5 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <item id="1" level_0="2" level_1="3" level_2="5" reward="coin" count="10" />
+  <item id="2" level_0="11" level_1="12" level_2="13" reward="coin" count="10" />
+  <item id="3" level_0="22" level_1="23" level_2="24" reward="coin" count="10" />
+  <item id="4" level_0="32" level_1="33" level_2="34" reward="coin" count="10" />
+  <item id="5" level_0="41" level_1="42" level_2="44" reward="coin" count="10" />
+  <item id="6" level_0="51" level_1="53" level_2="54" reward="coin" count="10" />
+  <item id="7" level_0="62" level_1="63" level_2="64" reward="coin" count="10" />
+  <item id="8" level_0="71" level_1="72" level_2="73" reward="coin" count="10" />
+  <item id="9" level_0="81" level_1="82" level_2="83" reward="coin" count="10" />
+  <item id="10" level_0="91" level_1="92" level_2="93" reward="coin" count="10" />
+  <item id="11" level_0="102" level_1="103" level_2="105" reward="coin" count="10" />
+  <item id="12" level_0="111" level_1="112" level_2="113" reward="coin" count="10" />
+  <item id="13" level_0="122" level_1="123" level_2="124" reward="coin" count="10" />
+  <item id="14" level_0="132" level_1="133" level_2="134" reward="coin" count="10" />
+  <item id="15" level_0="141" level_1="142" level_2="144" reward="coin" count="10" />
+  <item id="16" level_0="152" level_1="153" level_2="154" reward="coin" count="10" />
+  <item id="17" level_0="161" level_1="162" level_2="163" reward="coin" count="10" />
+  <item id="18" level_0="172" level_1="174" level_2="175" reward="coin" count="10" />
+</Root>

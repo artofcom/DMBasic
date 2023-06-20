@@ -1,0 +1,24 @@
+using UnityEngine;
+using System.Collections;
+using NOVNINE;
+
+public class Director : MonoBehaviour, IDirector {
+    void Awake() {
+        Platform.Init();
+    }
+
+	void Start () {
+        Scene.ChangeTo("MainScene");
+	}
+
+    void OnAppVersionChanged(object parms) {
+        Debugger.Assert(parms != null);
+        string[] versions = parms as string[];
+        Debugger.Assert(versions.Length == 2);
+
+        string oldV = versions[0];
+        string newV = versions[1];
+        //Migrate Here
+
+    }
+}

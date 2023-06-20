@@ -1,0 +1,12 @@
+{
+	"gameData": 
+		{
+			"key": "0",
+			"total_level" : 500,
+			"countClearedRescueMission": 0
+		},
+	
+	
+		
+		
+}

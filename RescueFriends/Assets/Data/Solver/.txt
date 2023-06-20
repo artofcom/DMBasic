@@ -1,0 +1,20 @@
+{
+	"specialFive": 30,
+	"bomb": 20,
+	"vertical": 10,
+	"horizontal": 10,
+	"frost": 30,
+	"snow": 10,
+	"snowMan": 50,
+	"cage": 30,
+	"shaded": 10,
+	"cake": 50,
+	"penguin": 10,
+	"sprialSnow": 10,
+	"timeBomb": 50,
+	"mystery": 10,
+	"yetiHealth": 30,
+	"treasure": 50,
+	"positionScoreInfo": 
+		[]
+}

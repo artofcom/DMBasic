@@ -1,0 +1,29 @@
+{
+	"specialFive": 0,
+	"bomb": 0,
+	"vertical": 0,
+	"horizontal": 0,
+	"frost": 0,
+	"snow": 20,
+	"snowMan": 30,
+	"cage": 50,
+	"shaded": 5,
+	"cake": 0,
+	"penguin": 0,
+	"sprialSnow": 0,
+	"timeBomb": 0,
+	"mystery": 0,
+	"yetiHealth": 0,
+	"treasure": 0,
+	"positionScoreInfo": 
+		[
+			"4,5:snow:300",
+			"4,4:snow:300",
+			"4,3:snow:300",
+			"4,5:shaded:300",
+			"4,4:shaded:300",
+			"4,3:shaded:300",
+			"4,0:snowman:300",
+			"4,1:snowman:300"
+		]
+}

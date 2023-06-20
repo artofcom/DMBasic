@@ -1,0 +1,22 @@
+using UnityEngine;
+using System.Collections;
+
+public class $ClassName : MonoBehaviour, IWidget {
+    
+$Connections
+
+/*
+    public $DataType data;
+
+    public void SetData($DataType _data) {
+        data = _data;
+        DoDataExchange();
+    }
+*/
+    public void DoDataExchange() {
+    
+    }
+
+$ButtonHandlers
+
+}

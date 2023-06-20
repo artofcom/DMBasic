@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root login="no_use">
+    <basic_info />
+    <coinInfo start="0" startStamina="5" PlayOn="30" />
+    <playonInfo mission="" playon="extraMoves5+" moveNum="5" addTime="30" booster="bombbooster" boosterNum="1"/>
+    <ads_info reward_id="coin" reward_count="2" cool_time_min="60" />
+</Root>

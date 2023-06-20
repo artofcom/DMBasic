@@ -1,0 +1,261 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &173384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 473384}
+  - component: {fileID: 11473384}
+  - component: {fileID: 11473380}
+  m_Layer: 0
+  m_Name: ModuleContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473384
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11473380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7581a05693ac41e4bbe5978c3f1509f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItems:
+  - id: coin
+    name: Coin
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: CoinRubby
+  - id: life
+    name: Life
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: heart
+  - id: hammer
+    name: Hammer
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: HammerPNG
+  - id: firecracker
+    name: Firecracker
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: CrossBombColorsSkullPNG
+  - id: magicswap
+    name: Magic Swap
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: SwapArrowsPNG
+  - id: magicshuffle
+    name: Magic Shuffle
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: shuffle
+  - id: moreturnbooster
+    name: 5More Turn
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: SwitchPawPNG
+  - id: hbombbooster
+    name: Horize Bomb
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: block_red_H 1
+  - id: vbombbooster
+    name: Vertical Bomb
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: block_red_V 1
+  - id: bombbooster
+    name: Bomb
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: block_red_B 1
+  - id: rainbowbooster
+    name: Rainbow
+    count: 0
+    consumable: 1
+    hidden: 0
+    spriteName: ColorCandyPNG
+  shopItems:
+  - cashItemUniqueNumber: 1
+    type: 2
+    icon: coin_0
+    consumable: 1
+    name: Ruby 100
+    description: Ruby 100
+    enabled: 1
+    bonusPercentage: 0
+    bonusCount: 0
+    isBestDeal: 0
+    rewards:
+    - itemId: coin
+      count: 100
+    price: 1.99
+    productId: id_ruby_100
+    serverPriceNumber: 0
+  - cashItemUniqueNumber: 2
+    type: 2
+    icon: coin_1
+    consumable: 1
+    name: Ruby 250
+    description: Ruby 250
+    enabled: 1
+    bonusPercentage: 6
+    bonusCount: 15
+    isBestDeal: 0
+    rewards:
+    - itemId: coin
+      count: 265
+    price: 4.99
+    productId: id_ruby_250
+    serverPriceNumber: 0
+  - cashItemUniqueNumber: 3
+    type: 2
+    icon: coin_2
+    consumable: 1
+    name: Ruby 500
+    description: Ruby 500
+    enabled: 1
+    bonusPercentage: 10
+    bonusCount: 50
+    isBestDeal: 0
+    rewards:
+    - itemId: coin
+      count: 550
+    price: 9.99
+    productId: id_ruby_500
+    serverPriceNumber: 0
+  - cashItemUniqueNumber: 4
+    type: 2
+    icon: coin_3
+    consumable: 1
+    name: Ruby 1000
+    description: Ruby 1000
+    enabled: 1
+    bonusPercentage: 15
+    bonusCount: 150
+    isBestDeal: 0
+    rewards:
+    - itemId: coin
+      count: 1150
+    price: 19.99
+    productId: id_ruby_1000
+    serverPriceNumber: 0
+  - cashItemUniqueNumber: 5
+    type: 2
+    icon: coin_4
+    consumable: 1
+    name: Ruby 1500
+    description: Ruby 1500
+    enabled: 1
+    bonusPercentage: 20
+    bonusCount: 300
+    isBestDeal: 0
+    rewards:
+    - itemId: coin
+      count: 1800
+    price: 29.99
+    productId: id_ruby_1500
+    serverPriceNumber: 0
+  - cashItemUniqueNumber: 6
+    type: 2
+    icon: coin_5
+    consumable: 1
+    name: Ruby 2500
+    description: Ruby 2500
+    enabled: 1
+    bonusPercentage: 30
+    bonusCount: 750
+    isBestDeal: 0
+    rewards:
+    - itemId: coin
+      count: 3250
+    price: 49.99
+    productId: id_ruby_2500
+    serverPriceNumber: 0
+  - cashItemUniqueNumber: 7
+    type: 2
+    icon: coin_6
+    consumable: 1
+    name: Ruby 5000
+    description: Ruby 5000
+    enabled: 1
+    bonusPercentage: 40
+    bonusCount: 2000
+    isBestDeal: 1
+    rewards:
+    - itemId: coin
+      count: 7000
+    price: 99.99
+    productId: id_ruby_5000
+    serverPriceNumber: 0
+--- !u!114 &11473384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8c545b577d04e82b1f22eb11b3df52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appID: rainbowfox
+  appName:
+    EN: Rainbow Fox
+    SE: Rainbow Fox
+    DK: Rainbow Fox
+    NO: Rainbow Fox
+    DE: Rainbow Fox
+  appDisplayName: Rainbow Fox
+  bundleVersion: 1.1.8
+  bundleIdentifier: com.bitmango.go.jewelmatchking
+  revision: 669
+  sharedRevision: 1545
+  appIcon: {fileID: 0}
+  storeType: 1
+  storeKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoidVfF/8sTeXYrWS7NjpQ291QXkZ7tQ1AIG+/LrT5iPBzSTjYCjPgi4RT/Oh897bFWUMeS5ihy5oczoT9i/Y8S8I2BujJw9czcxtecooa7jnSknZoE1xPv4buS7Ag1iC5vIYI59e0V6K8v2J3xyheYcRB5MWdPg23RqxELF4nLLT2LmCh7TgoQyexYVwO7VPYWXNMIUmCemkwktMlt/zKSAd2hUCaD9VjiEWJpjuI5JfWywbP26fLbkFTTXjM6klqdAOFxc6Q0FgoY1jya27S2Dp2Mb3/6lecjg8UtT+UyiXRHL3KAd7wtw6ShirwMyOqL/uZ5qlFr2lexhtb6f9MQIDAQAB
+  GoogleDriveKey: 
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 173384}
+  m_IsPrefabParent: 1

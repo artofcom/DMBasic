@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueFriends_564_FB_rebuild", "RescueFriends_564_FB_rebuild.csproj", "{F2EF917D-4693-6600-28B6-D8F1FEC52BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueFriends_564_FB_rebuild.Editor", "RescueFriends_564_FB_rebuild.Editor.csproj", "{121D6317-BB4E-23A8-B626-C4EC9BF9DA2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2EF917D-4693-6600-28B6-D8F1FEC52BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2EF917D-4693-6600-28B6-D8F1FEC52BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2EF917D-4693-6600-28B6-D8F1FEC52BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2EF917D-4693-6600-28B6-D8F1FEC52BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121D6317-BB4E-23A8-B626-C4EC9BF9DA2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121D6317-BB4E-23A8-B626-C4EC9BF9DA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121D6317-BB4E-23A8-B626-C4EC9BF9DA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121D6317-BB4E-23A8-B626-C4EC9BF9DA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

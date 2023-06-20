@@ -1,0 +1,5 @@
+<!-- ACTIVITIES -->
+	    <activity 
+            android:name="com.novnine.NativeProxyActivity"
+            android:configChanges="orientation|keyboardHidden"
+        ></activity>

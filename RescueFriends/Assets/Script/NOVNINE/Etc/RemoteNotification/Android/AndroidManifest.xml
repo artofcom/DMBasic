@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.example.games.mainlibproj"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <application>
+<!-- ACTIVITIES -->
+        <!--receiver android:name="com.bitmango.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND"-->
+        <receiver android:name="nov9.gcm.UnityGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+          <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <!-- MODIFICATION REQUIRED - Replace "BUNDLEIDENTIFIER" with your package name -->
+            <!--category android:name="BUNDLEIDENTIFIER" /-->
+            <category android:name="com.nov9.jellomagicfirends" />
+          </intent-filter>
+        </receiver>
+        <!--service android:name="com.bitmango.gcm.GCMIntentService" /-->
+        <service android:name="nov9.gcm.UnityGCMIntentService" />
+	</application>
+	        
+<!-- PERMISSIONS -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- MODIFICATION REQUIRED - Replace "BUNDLEIDENTIFIER.permission.C2D_MESSAGE" with your bundle ID -->
+    <permission android:name="com.nov9.jellomagicfirends.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.nov9.jellomagicfirends.permission.C2D_MESSAGE" />
+    <!-- The two elements above ensure that only this application can receive the messages and registration result -->
+
+</manifest >

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<item id="life"         count_0="1" price_0="10" sale_0="0"   count_1="5" price_1="40" sale_1="20" count_2="10" price_2="70" sale_2="30" />
+  <item id="hammer"       count_0="1" price_0="25" sale_0="0"   count_1="3" price_1="50" sale_1="33" count_2="6" price_2="75" sale_2="50" />
+  <item id="firecracker"  count_0="1" price_0="35" sale_0="0"   count_1="3" price_1="70" sale_1="33" count_2="6" price_2="105" sale_2="50" />
+  <item id="magicswap"    count_0="1" price_0="20" sale_0="0"   count_1="3" price_1="40" sale_1="33" count_2="6" price_2="60" sale_2="50" />
+  <item id="magicshuffle" count_0="1" price_0="15" sale_0="0"   count_1="3" price_1="30" sale_1="33" count_2="6" price_2="45" sale_2="50" />
+  <item id="moreturnbooster" count_0="1" price_0="25" sale_0="0" count_1="3" price_1="50" sale_1="33" count_2="6" price_2="75" sale_2="50" />
+  <item id="hbombbooster" count_0="1" price_0="10" sale_0="0"   count_1="3" price_1="20" sale_1="33" count_2="6" price_2="30" sale_2="50" />
+  <item id="vbombbooster" count_0="1" price_0="10" sale_0="0"   count_1="3" price_1="20" sale_1="33" count_2="6" price_2="30" sale_2="50" />
+  <item id="bombbooster"  count_0="1" price_0="20" sale_0="0"   count_1="3" price_1="40" sale_1="33" count_2="6" price_2="60" sale_2="50" />
+  <item id="rainbowbooster" count_0="1" price_0="30" sale_0="0" count_1="3" price_1="60" sale_1="33" count_2="6" price_2="90" sale_2="50" />
+</Root>

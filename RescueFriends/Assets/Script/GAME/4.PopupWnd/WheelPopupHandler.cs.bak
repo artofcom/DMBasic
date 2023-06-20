@@ -1,0 +1,245 @@
+﻿using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+using NOVNINE;
+
+public class WheelPopupHandler : BasePopupHandler 
+{
+    const int NUM_SECTOR        = 8;
+
+    public tk2dUIItem _btnSpin  = null;
+    public tk2dUIItem _btnFreeSpin= null;
+    public tk2dUIItem _btnClose = null;
+
+    public tk2dSprite _sprWheel = null;
+    public tk2dSprite[] _arrSprItems; 
+    public tk2dTextMesh[] _arrTxtCounts;
+
+    _WHEEL_GACHA_ITEM_INFO _itemPrize;
+    bool _isFreeClickable       = false;
+    bool _isOnFreeSpin          = false;
+
+    protected override void  OnEnter (object param) 
+	{	
+		base.OnEnter(param);
+
+        _initUI();
+    }
+	
+	public override void CLICK (tk2dUIItem item) 
+	{
+		base.CLICK(item);
+		
+		if(_btnClose == item)
+			Scene.ClosePopup();
+		else if(_btnSpin == item)            
+		{
+            if(Wallet.GetItemCount("coin") < InfoLoader.getPriceGacha())
+            {
+                // Rubby buy popup needed
+                MessagePopupHandler.Data data2 = new MessagePopupHandler.Data();
+                data2.isOkOnly      = false;
+                data2.strMessage    = "You don't have \nenough rubbys.\nWanna Buy some?";
+                data2.emotion       = MessagePopupHandler.EMOTIONS.SAD;
+                Scene.ShowPopup("MessagePopup", data2, (param) =>
+                {
+                    if(null != param)
+                    {
+                        MessagePopupHandler.RET ret = (MessagePopupHandler.RET)param;
+                        if(ret == MessagePopupHandler.RET.OK)
+                            Scene.ShowPopup("BuyRubyPopup", null, null);
+                    }
+                });
+            }
+            else
+            {                
+                _isOnFreeSpin   = false;
+                _spin();
+            }
+		}
+        else if(_btnFreeSpin == item)
+        {
+            if(_isFreeClickable)
+            {
+                _isOnFreeSpin   = true;
+                _spin();
+            }
+            else
+            {
+                MessagePopupHandler.Data data2 = new MessagePopupHandler.Data();
+                data2.isOkOnly      = true;
+                data2.strMessage    = "Please try this later.";
+                data2.emotion       = MessagePopupHandler.EMOTIONS.SAD;
+                Scene.ShowPopup("MessagePopup", data2, null);
+            }
+        }
+	}
+
+    void _spin()
+    {
+        JMFUtils.interactTk2dButton(false, _btnSpin, _btnSpin.transform.Find("bg"));
+        JMFUtils.interactTk2dButton(false, _btnFreeSpin, _btnFreeSpin.transform.Find("bg"));
+        JMFUtils.interactTk2dButton(false, _btnClose, _btnClose.transform.Find("bg"));
+
+#if !UNITY_EDITOR
+        UnityEngine.Analytics.Analytics.CustomEvent("WheelSpined", new Dictionary<string, object>
+        {
+            { "isFree", _isOnFreeSpin }
+        });
+#endif
+
+        Scene.ShowPopup("SpinReadyPopup", null, (param)=>
+        {
+            const float fDuration   = 5.0f;
+            _sprWheel.transform.DOLocalRotate(new Vector3(0, 0, UnityEngine.Random.Range(3000, 5000)), fDuration).SetRelative(true).SetEase(Ease.OutCirc);
+            DOVirtual.DelayedCall( fDuration+0.5f, () => _onWheelStopped() );
+
+            if(_isOnFreeSpin)
+            {
+                Root.Data.gameData.SetLastFreeGachaDate( DateTime.UtcNow.Ticks );
+                FireBaseHandler.update("playerData/m_FreeGachaDate", DateTime.UtcNow.Ticks);
+            }
+            else                Wallet.Use("coin", -1 * InfoLoader.getPriceGacha());
+        });
+    }
+
+    void _initUI()
+    {
+        Debug.Assert(InfoLoader.GetCachaWheelItemCount() == _arrSprItems.Length);
+        Debug.Assert(InfoLoader.GetCachaWheelItemCount() == _arrTxtCounts.Length);
+
+        StartCoroutine( _coUpdateFreeTime() );
+
+        // init cell items by data.
+        _WHEEL_GACHA_ITEM_INFO oInfo    = new _WHEEL_GACHA_ITEM_INFO();
+        for(int q = 0; q < _arrSprItems.Length; ++q)
+        {
+            InfoLoader.GetWheelGachaItemInfoByIndex(q, ref oInfo);
+            if(0 == oInfo.count)        continue;
+
+            NOVNINE.InventoryItem       invenItem = NOVNINE.Context.UncleBill.GetInventoryItemByID(oInfo.strItemId);
+            if(null == invenItem)       continue;
+
+            _arrSprItems[q].spriteName  = invenItem.spriteName;
+            _arrTxtCounts[q].text       = oInfo.count.ToString();
+            _arrTxtCounts[q].Commit();
+        }
+
+        // button init.
+        Transform trTarget      = _btnSpin.transform.Find("bg/txtPrice");
+        if(null != trTarget)
+        {
+            tk2dTextMesh txtPrice= trTarget.GetComponent<tk2dTextMesh>();
+            if(null != txtPrice)
+            {
+                txtPrice.text   = InfoLoader.getPriceGacha().ToString();
+                txtPrice.Commit();
+            }
+        }
+
+        // 각도와 대조해서 item 맞추는 기능 필요.
+        _sprWheel.transform.localEulerAngles = new Vector3(.0f, .0f, UnityEngine.Random.Range(0, 360));
+    }
+
+    IEnumerator _coUpdateFreeTime()
+    {
+        Transform trTarget      = _btnFreeSpin.transform.Find("bg/txtTitle");
+        if(null == trTarget)    yield break;
+        
+        tk2dTextMesh txtFree    = trTarget.GetComponent<tk2dTextMesh>();
+        if(null == txtFree)     yield break;
+
+        int freeTime_min        = InfoLoader.getMinTimeFreeGacha();
+        string strTimeText      = "";
+        do
+        {
+            if(null == Root.Data)
+            {
+                yield return new WaitForSeconds(0.2f);
+                continue;
+            }
+
+            DateTime timeLastFree = new DateTime( Root.Data.gameData.GetLastFreeGachaDate() );
+            long targetTick = timeLastFree.Ticks + freeTime_min*60*Data.GameData.TICK_DETAIL;
+            if(DateTime.UtcNow.Ticks >= targetTick)
+            {
+                strTimeText     = "Free";
+                _isFreeClickable= true;
+            }
+            else
+            {
+                long timeGap    = targetTick - DateTime.UtcNow.Ticks;
+                timeGap /= Data.GameData.TICK_DETAIL;
+
+                int hour        = (int)(timeGap / (60*60));     timeGap -= hour*60*60;
+                int min         = (int)(timeGap / 60);          timeGap -= min*60;
+                int sec         = (int)timeGap;
+                strTimeText     = string.Format("{0:D2}:{1:D2}:{2:d2}", hour, min, sec);
+                _isFreeClickable= false;
+            }
+
+            //_btnFreeSpin.GetComponent<BoxCollider>().enabled    = _isFreeClickable;
+            //_btnFreeSpin.transform.Find("bg").GetComponent<tk2dSlicedSprite>().color = _isFreeClickable ? Color.white : Color.gray;
+
+            txtFree.text        = strTimeText;
+            txtFree.Commit();
+
+            yield return new WaitForSeconds(1.0f);
+
+        }while(true);
+    }
+
+    void _onWheelStopped()
+    {
+        const int _360_DEGREE   = 360;
+        int nNormalizedAngle    = (int)_sprWheel.transform.localEulerAngles.z;
+        if(nNormalizedAngle < 0)
+        {
+            do
+            {
+                nNormalizedAngle += _360_DEGREE;
+                if(nNormalizedAngle >=0)
+                    break;
+            }while(true);
+        }
+        
+        int times               = nNormalizedAngle / _360_DEGREE;
+        nNormalizedAngle        = nNormalizedAngle - times*_360_DEGREE;
+
+        int nDivAngle           = _360_DEGREE / NUM_SECTOR; // 45
+        nNormalizedAngle += (nDivAngle/2);                  // this gonna be 20.
+
+        _WHEEL_GACHA_ITEM_INFO oInfo    = new _WHEEL_GACHA_ITEM_INFO();
+        int idxResult           = _arrSprItems.Length - (nNormalizedAngle / nDivAngle);
+        idxResult %= _arrSprItems.Length;
+        InfoLoader.GetWheelGachaItemInfoByIndex(idxResult, ref oInfo);
+
+        Debug.Log(string.Format("Hit item !!! {0}-{1}", idxResult, oInfo.strItemId));
+
+        ItemEarnPopupHandler.Info data = new ItemEarnPopupHandler.Info();
+        NOVNINE.InventoryItem   invenItem = NOVNINE.Context.UncleBill.GetInventoryItemByID(oInfo.strItemId);
+        if(null != invenItem)   data.strPicName = invenItem.spriteName;
+        data.count              = oInfo.count;
+        _itemPrize              = oInfo;
+        Scene.ShowPopup("ItemEarnPopup", data, (param) =>
+        {
+            NOVNINE.Wallet.Gain(_itemPrize.strItemId, _itemPrize.count);
+        });
+
+        JMFUtils.interactTk2dButton(true, _btnSpin, _btnSpin.transform.Find("bg"));
+        JMFUtils.interactTk2dButton(true, _btnFreeSpin, _btnFreeSpin.transform.Find("bg"));
+        JMFUtils.interactTk2dButton(true, _btnClose, _btnClose.transform.Find("bg"));
+    }
+
+    public static bool isFreeSpinUsable()
+    {
+        int freeTime_min        = InfoLoader.getMinTimeFreeGacha();
+        DateTime timeLastFree   = new DateTime( Root.Data.gameData.GetLastFreeGachaDate() );
+        long targetTick         = timeLastFree.Ticks + freeTime_min*60*Data.GameData.TICK_DETAIL;
+
+        return (DateTime.UtcNow.Ticks >= targetTick);
+    }
+
+}

@@ -1,0 +1,22 @@
+using UnityEngine;
+using System.Collections;
+
+public class $ClassName : MonoBehaviour, IPopupWnd {
+    
+$Connections
+
+    public void DoDataExchange() {
+    
+    }
+
+    public void OnEnterPopup(object param) {
+
+    }
+
+    public void OnLeavePopup() {
+
+    }
+    
+$ButtonHandlers
+
+}

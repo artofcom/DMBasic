@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<item reward="coin" count="5" />
+	<item reward="coin" count="5" />
+	<item reward="coin" count="8" />
+	<item reward="coin" count="8" />
+  <item reward="coin" count="8" />
+  <item reward="coin" count="10" />
+  <item reward="coin" count="10" />
+  <item reward="coin" count="10" />
+  <item reward="coin" count="15" />
+  <item reward="coin" count="20" />
+</Root>

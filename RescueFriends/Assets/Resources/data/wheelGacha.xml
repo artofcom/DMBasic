@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <price rubby="10" free_time_min="240" />
+  <wheel_item id="coin" count="5"/>
+  <wheel_item id="life" count="1"/>
+  <wheel_item id="firecracker" count="1"/>
+  <wheel_item id="coin" count="5"/>
+  <wheel_item id="magicshuffle" count="1"/>
+  <wheel_item id="rainbowbooster" count="1"/>
+  <wheel_item id="coin" count="5"/>
+  <wheel_item id="bombbooster" count="1"/>
+</Root>

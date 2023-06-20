@@ -1,0 +1,41 @@
+
+Jewel_box_eff.png
+size: 689,380
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light_eff01
+  rotate: false
+  xy: 2, 8
+  size: 356, 370
+  orig: 356, 370
+  offset: 0, 0
+  index: -1
+light_eff02
+  rotate: false
+  xy: 360, 84
+  size: 327, 294
+  orig: 327, 294
+  offset: 0, 0
+  index: -1
+star_eff01
+  rotate: false
+  xy: 360, 2
+  size: 83, 80
+  orig: 83, 80
+  offset: 0, 0
+  index: -1
+star_eff02
+  rotate: false
+  xy: 498, 43
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1
+star_eff03
+  rotate: false
+  xy: 445, 32
+  size: 51, 50
+  orig: 51, 50
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<item slUniqueNumber="1" type="0" pointType="3" strName="coin" />
+	<item slUniqueNumber="2" type="1" pointType="2" strName="life" />
+	<item slUniqueNumber="3" type="2" pointType="1" strName="hammer" coinprice="1900" buyNum="3"/>
+	<item slUniqueNumber="4" type="2" pointType="1" strName="firecracker" coinprice="2100" buyNum="3" />
+	<item slUniqueNumber="5" type="2" pointType="1" strName="magicswap" coinprice="2000" buyNum="3" />
+	<item slUniqueNumber="6" type="2" pointType="1" strName="rainbowbust" coinprice="2500" buyNum="3" />
+	<item slUniqueNumber="7" type="3" pointType="1" strName="mixedbooster" coinprice="1300" buyNum="3" />
+	<item slUniqueNumber="8" type="3" pointType="1" strName="triplebooster" coinprice="1600" buyNum="3" />
+	<item slUniqueNumber="9" type="3" pointType="1" strName="specialbooster" coinprice="1900" buyNum="3" />
+	<item slUniqueNumber="10" type="5" pointType="60" strName="InfiniteStamina"/>
+	
+</Root>
+<!-- type = "0: coin", type = "1: life",type = "2: in game item", type = "3: boost", type = "4: ingredients", type = "5: 시간제한 life 아이템",  -->

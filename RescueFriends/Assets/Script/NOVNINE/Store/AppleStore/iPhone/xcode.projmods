@@ -1,0 +1,15 @@
+{
+  "group": "StoreKit",
+  "patches": [],
+  "libs": [],
+  "librarysearchpaths": [],
+  "headerpaths": [],
+  "frameworks": [
+    "StoreKit.framework:weak"
+  ],
+  "files": [],
+  "folders": [
+	"BitMango/Store/AppleStore/iPhone"
+  ],	
+  "excludes": [ "^.*/config.plist$", "^.*\\.DS_Store$", "^.*\\.swp$", "^.*\\.meta$", "^.*\\.projmods" ]
+}

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "428757517273",
+    "firebase_url": "https://rainbow-fox.firebaseio.com",
+    "project_id": "rainbow-fox",
+    "storage_bucket": "rainbow-fox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428757517273:android:1a0e678fbae6c793",
+        "android_client_info": {
+          "package_name": "com.discomonkey.rainbowfox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428757517273-f96tsdc0ai2jk0gsg7ot325sio23q488.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgkJYiaSg6XYP5dXHRDFp5ARCBjOW6ddU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

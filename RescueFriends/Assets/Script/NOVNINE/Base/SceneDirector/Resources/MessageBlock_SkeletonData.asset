@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: MessageBlock_SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAssets: []
+  spriteCollection: {fileID: 11435576, guid: a2eb207481c8c4681b23e82e7d827a78, type: 2}
+  scale: 1
+  skeletonJSON: {fileID: 4900000, guid: 41d32f15e8edd40beb309b385288379d, type: 3}
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0
+  controller: {fileID: 0}
